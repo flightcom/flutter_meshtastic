@@ -291,11 +291,13 @@ class MeshtasticClient {
     int? destinationId,
     int channel = 0,
   }) async {
-    if (!isConnected)
+    if (!isConnected) {
       throw const ConnectionException('Not connected to a device');
+    }
 
-    if (!isConfigured)
+    if (!isConfigured) {
       throw const ConnectionException('Device configuration not complete');
+    }
 
     // Generate a random packet ID
     final packetId = DateTime.now().millisecondsSinceEpoch & 0xFFFFFFFF;
@@ -326,11 +328,13 @@ class MeshtasticClient {
     double longitude, {
     int? altitude,
   }) async {
-    if (!isConnected)
+    if (!isConnected) {
       throw const ConnectionException('Not connected to a device');
+    }
 
-    if (!isConfigured)
+    if (!isConfigured) {
       throw const ConnectionException('Device configuration not complete');
+    }
 
     final position = Position(
       latitudeI: (latitude * 1e7).round(),
@@ -355,15 +359,16 @@ class MeshtasticClient {
     );
 
     _logger.info(
-      'Sending position: lat=${latitude}, lon=${longitude}, alt=${altitude}',
+      'Sending position: lat=$latitude, lon=$longitude, alt=$altitude',
     );
     await _sendPacket(packet);
   }
 
   /// Send a packet to the device
   Future<void> _sendPacket(MeshPacket packet) async {
-    if (_toRadioChar == null)
+    if (_toRadioChar == null) {
       throw const ConnectionException('ToRadio characteristic not available');
+    }
 
     final toRadio = ToRadio(packet: packet);
     final data = toRadio.writeToBuffer();

@@ -1,4 +1,4 @@
-import 'dart:math' as Math;
+import 'dart:math' as math;
 import '../../generated/mesh.pb.dart';
 import '../../generated/config.pb.dart';
 import '../../generated/telemetry.pb.dart';
@@ -51,14 +51,6 @@ class NodeInfoWrapper {
 
   /// User's short name
   String? get shortName => user?.shortName;
-
-  /// User's MAC address as hex string
-  String? get macaddr {
-    if (user?.macaddr.isEmpty != false) return null;
-    return user!.macaddr
-        .map((byte) => byte.toRadixString(16).padLeft(2, '0'))
-        .join(':');
-  }
 
   /// Hardware model
   HardwareModel? get hwModel => user?.hwModel;
@@ -134,19 +126,19 @@ class NodeInfoWrapper {
     double dLon = _degreesToRadians(lon2 - lon1);
 
     double a =
-        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-        Math.cos(_degreesToRadians(lat1)) *
-            Math.cos(_degreesToRadians(lat2)) *
-            Math.sin(dLon / 2) *
-            Math.sin(dLon / 2);
+        math.sin(dLat / 2) * math.sin(dLat / 2) +
+        math.cos(_degreesToRadians(lat1)) *
+            math.cos(_degreesToRadians(lat2)) *
+            math.sin(dLon / 2) *
+            math.sin(dLon / 2);
 
-    double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    double c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a));
 
     return earthRadius * c;
   }
 
   static double _degreesToRadians(double degrees) {
-    return degrees * (Math.pi / 180);
+    return degrees * (math.pi / 180);
   }
 
   /// Get a display name for this node (prioritizes long name, falls back to short name, then node ID)
@@ -161,7 +153,7 @@ class NodeInfoWrapper {
     final parts = <String>[];
 
     if (batteryLevel != null) {
-      parts.add('Battery: ${batteryLevel}%');
+      parts.add('Battery: $batteryLevel%');
     }
 
     if (channelUtilization != null) {

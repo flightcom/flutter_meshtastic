@@ -12,4 +12,9 @@
 
 ## 0.0.2
 
-* Upgraded dependency vers
+* Upgraded dependency versions
+
+
+## 0.0.3
+
+* Replace deprecated Code

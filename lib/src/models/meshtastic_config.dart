@@ -127,7 +127,7 @@ class MeshtasticConfigWrapper {
   int? get positionBroadcastSecs => positionConfig?.positionBroadcastSecs;
 
   /// Whether GPS is enabled
-  bool get gpsEnabled => positionConfig?.gpsEnabled ?? true;
+  bool get gpsEnabled => gpsMode == Config_PositionConfig_GpsMode.ENABLED;
 
   /// LoRa region
   Config_LoRaConfig_RegionCode? get region => loraConfig?.region;

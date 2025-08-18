@@ -1,5 +1,3 @@
-library meshtastic_flutter;
-
 export 'src/meshtastic_client.dart';
 export 'src/models/connection_state.dart';
 export 'src/models/mesh_packet_wrapper.dart';
