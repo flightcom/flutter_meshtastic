@@ -1,7 +1,7 @@
 name: meshtastic_flutter
 description: "A comprehensive Flutter package for communicating with Meshtastic devices over Bluetooth Low Energy (BLE). Supports the complete Meshtastic protocol including messaging, node management, and real-time updates."
 version: 0.0.1
-homepage: https://github.com/meshtastic/meshtastic_flutter
+homepage: https://github.com/M4dhav/meshtastic_flutter
 
 environment:
   sdk: ^3.8.1
@@ -14,6 +14,7 @@ dependencies:
   flutter_blue_plus: ^1.32.12
   permission_handler: ^11.3.1
   logging: ^1.2.0
+  fixnum: ^1.1.1
 
 dev_dependencies:
   flutter_test:
