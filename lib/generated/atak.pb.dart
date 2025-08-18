@@ -357,7 +357,7 @@ class Group extends $pb.GeneratedMessage {
 
 ///
 ///  ATAK EUD Status
-///  <status battery='100' />
+///  status battery='100'
 class Status extends $pb.GeneratedMessage {
   factory Status({
     $core.int? battery,
@@ -416,7 +416,7 @@ class Status extends $pb.GeneratedMessage {
 
 ///
 ///  ATAK Contact
-///  <contact endpoint='0.0.0.0:4242:tcp' phone='+12345678' callsign='FALKE'/>
+///  contact endpoint='0.0.0.0:4242:tcp' phone='+12345678' callsign='FALKE'
 class Contact extends $pb.GeneratedMessage {
   factory Contact({
     $core.String? callsign,

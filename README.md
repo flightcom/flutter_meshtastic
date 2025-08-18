@@ -20,6 +20,8 @@ dependencies:
   meshtastic_flutter: ^0.0.1
 ```
 
+Complete the setup for ```permission_handler``` plugin as given [here](https://pub.dev/packages/permission_handler)
+
 ## Permissions
 
 ### Android

@@ -8,3 +8,8 @@
 * Configuration access and node management
 * Comprehensive error handling and type safety
 * Cross-platform support (Android/iOS)
+
+
+## 0.0.2
+
+* Upgraded dependency vers
